@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export const LinkButton = (props) => {
   return (
@@ -17,15 +16,14 @@ export const LinkButton = (props) => {
 };
 export default LinkButton;
 
-
 LinkButton.propTypes = {
-  variant: PropTypes.oneOf(["text", "contained", undefined]), 
-  href: PropTypes.string,
-  name: PropTypes.string
+  variant: PropTypes.oneOf(["text", "contained", undefined]).isRequired,
+  href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 LinkButton.defaultProps = {
   variant: undefined,
   href: "",
-  name: "Link"
+  name: "Link",
 };
