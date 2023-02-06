@@ -1,15 +1,15 @@
 import React from "react";
-import { ButtonSubmit } from "./SubmitButton";
+import { SubmitButton } from "./SubmitButton";
 
 export default {
-  title: "Example/ButtonSubmit",
-  component: ButtonSubmit,
+  title: "Example/SubmitButton",
+  component: SubmitButton,
   argTypes: {
     name: "",
   },
 };
 
-const Template = (args) => <ButtonSubmit {...args} />;
+const Template = (args) => <SubmitButton {...args} />;
 
 export const Submit = Template.bind({});
 

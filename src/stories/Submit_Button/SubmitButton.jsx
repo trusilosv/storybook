@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 //   name: string;
 // };
 
-export const ButtonSubmit = ({ name }) => {
+export const SubmitButton = ({ name }) => {
   return (
     <button
       aria-label="Submit Button"
@@ -17,12 +17,12 @@ export const ButtonSubmit = ({ name }) => {
   );
 };
 
-export default ButtonSubmit;
+export default SubmitButton;
 
-ButtonSubmit.propTypes = {
+SubmitButton.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-ButtonSubmit.defaultProps = {
+SubmitButton.defaultProps = {
   name: "Submit",
 };

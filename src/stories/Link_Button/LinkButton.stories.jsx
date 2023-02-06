@@ -6,7 +6,9 @@ export default {
   title: "Example/LinkButton",
   component: LinkButton,
   argTypes: {
-    variant: "text",
+    variant: {
+      description: "Варианты внешнего вида кнопки",
+    },
     name: "Link",
     href: "href",
   },
@@ -17,8 +19,8 @@ const Template = (args) => <LinkButton {...args} />;
 export const Text = Template.bind({});
 
 Text.args = {
-  variant: "text",
   name: "Link",
+  variant: "text",
   href: "",
 };
 
