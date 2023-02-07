@@ -9,7 +9,7 @@ type TLinkButtonProps = {
 export const LinkButton: FC<TLinkButtonProps> = ({
   variant = undefined,
   href = "",
-  name = "Link",
+  name = "Linkee",
 }) => {
   return (
     <a

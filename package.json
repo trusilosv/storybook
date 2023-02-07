@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "test-npm",
+  "version": "0.0.1",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,6 +10,7 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -21,12 +22,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "watch:css": "npx tailwindcss -i ./src/stories/input.css -o ./src/stories/assets/tailwind.css --watch"
+    "watch:css": "npx tailwindcss -i ./src/stories/input.css -o ./src/stories/assets/tailwind.css --watch",
+    "build": "cross-env BABEL_ENV=production babel src -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -70,7 +72,13 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
     "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
     "prop-types": "^15.8.1",
     "webpack": "^5.75.0"
-  }
+  },
+  "description": "create packages",
+  "main": "index.js",
+  "repository": "https://github.com/trusilosv/storybook.git",
+  "author": "Sergey Trusilo <svt@krononsoft.com>",
+  "license": "MIT"
 }
