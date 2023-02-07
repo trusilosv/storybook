@@ -1,6 +1,12 @@
-import PropTypes from "prop-types";
+import React, { FC } from "react";
 
-export const LinkButton = ({
+type TLinkButtonProps = {
+  variant: "text" | "contained" | undefined;
+  href: string;
+  name: string;
+};
+
+export const LinkButton: FC<TLinkButtonProps> = ({
   variant = undefined,
   href = "",
   name = "Link",
@@ -20,11 +26,11 @@ export const LinkButton = ({
 };
 export default LinkButton;
 
-LinkButton.propTypes = {
-  variant: PropTypes.oneOf(["text", "contained", undefined]).isRequired,
-  href: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-};
+// LinkButton.propTypes = {
+//   variant: PropTypes.oneOf(["text", "contained", undefined]).isRequired,
+//   href: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+// };
 
 // LinkButton.defaultProps = {
 //   variant: undefined,

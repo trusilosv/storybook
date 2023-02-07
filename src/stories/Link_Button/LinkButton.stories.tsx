@@ -1,3 +1,4 @@
+import { Story } from "@storybook/react";
 import React from "react";
 
 import { LinkButton } from "./LinkButton";
@@ -8,15 +9,22 @@ export default {
   argTypes: {
     variant: {
       description: "Варианты внешнего вида кнопки",
+      options: ["text", "contained", undefined],
+      control: {
+        type: "radio",
+      },
     },
-    name: "Link",
+    name: {
+      description: "Название кнопки",
+    },
     href: "href",
   },
 };
+// as Meta
 
-const Template = (args) => <LinkButton {...args} />;
+const Template = (args: any) => <LinkButton {...args} />;
 
-export const Text = Template.bind({});
+export const Text: Story = Template.bind({});
 
 Text.args = {
   name: "Link",
@@ -24,7 +32,7 @@ Text.args = {
   href: "",
 };
 
-export const Contained = Template.bind({});
+export const Contained: Story = Template.bind({});
 Contained.args = {
   name: "LinkButton",
   variant: "contained",
