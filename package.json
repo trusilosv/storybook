@@ -1,6 +1,6 @@
 {
   "name": "test-npm",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,6 +10,7 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "auto": "^10.38.5",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,7 +28,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "watch:css": "npx tailwindcss -i ./src/stories/input.css -o ./src/stories/assets/tailwind.css --watch",
-    "build": "cross-env BABEL_ENV=production babel src -d dist"
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "release": "auto shipit --base-branch=main"
   },
   "eslintConfig": {
     "extends": [
@@ -77,8 +79,18 @@
     "webpack": "^5.75.0"
   },
   "description": "create packages",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/trusilosv/storybook.git",
   "author": "Sergey Trusilo <svt@krononsoft.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  }
 }
