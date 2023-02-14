@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-type TLinkButtonProps = {
+export type TLinkButtonProps = {
   variant: "text" | "contained" | undefined;
   href: string;
   name: string;
@@ -9,7 +9,7 @@ type TLinkButtonProps = {
 export const LinkButton: FC<TLinkButtonProps> = ({
   variant = undefined,
   href = "",
-  name = "Linkee",
+  name = "Link",
 }) => {
   return (
     <a

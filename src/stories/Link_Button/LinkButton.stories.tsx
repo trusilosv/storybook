@@ -1,4 +1,4 @@
-import { Story } from "@storybook/react";
+import { ComponentStory } from "@storybook/react";
 import React from "react";
 
 import { LinkButton } from "./LinkButton";
@@ -20,11 +20,12 @@ export default {
     href: "href",
   },
 };
-// as Meta
 
-const Template = (args: any) => <LinkButton {...args} />;
+const Template: ComponentStory<typeof LinkButton> = (args) => (
+  <LinkButton {...args} />
+);
 
-export const Text: Story = Template.bind({});
+export const Text = Template.bind({});
 
 Text.args = {
   name: "Link",
@@ -32,7 +33,7 @@ Text.args = {
   href: "",
 };
 
-export const Contained: Story = Template.bind({});
+export const Contained = Template.bind({});
 Contained.args = {
   name: "LinkButton",
   variant: "contained",
